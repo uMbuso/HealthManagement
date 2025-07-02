@@ -1,0 +1,6 @@
+@Pill_eHealth_HostAddress = http://localhost:5281
+
+GET {{Pill_eHealth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
