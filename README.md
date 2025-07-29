@@ -1,28 +1,34 @@
-This is a RESTful Web API built using ASP.NET Core, Entity Framework Core, and CORS support. It handles patient data operations in the Pill-eHealth system.
+# Pill-eHealth Patient API
 
-Key Features:
-GET all patients
-Returns a list of all patients in the system.
+This is a RESTful Web API built with **ASP.NET Core** and **Entity Framework Core**, designed to manage patient records in the Pill-eHealth system. The API supports essential CRUD operations, follows the DTO pattern for data transfer, and includes CORS configuration for cross-origin access.
 
-GET patient by ID or MSISDN
-Fetches individual patient records by unique system ID or mobile number.
+## Key Features
 
-POST new patient
-Adds a new patient record to the database.
+- **GET** `/patients`  
+  Retrieves a list of all patients in the system.
 
-PUT update patient
-Updates existing patient data.
+- **GET** `/patients/{id}` or `/patients/by-msisdn/{msisdn}`  
+  Fetches a patient by their system-assigned ID or mobile number (MSISDN).
 
-DELETE patient
-Deletes a patient by their system-assigned ID.
+- **POST** `/patients`  
+  Adds a new patient record.
 
-Technologies Used:
-ASP.NET Core Web API (Microsoft.AspNetCore.Mvc)
+- **PUT** `/patients/{id}`  
+  Updates an existing patient’s information.
 
-Entity Framework Core (Microsoft.EntityFrameworkCore)
+- **DELETE** `/patients/{id}`  
+  Deletes a patient using their system ID.
 
-DTO pattern for clean data handling
+## Technologies Used
 
-CORS configuration for cross-origin API access
+- **ASP.NET Core Web API** (`Microsoft.AspNetCore.Mvc`)
+- **Entity Framework Core** (`Microsoft.EntityFrameworkCore`)
+- **Data Transfer Objects (DTOs)** for structured data handling
+- **CORS Configuration** to allow secure cross-origin API requests
+- **Asynchronous operations** for efficient database access
 
-Async database operations for performance
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
